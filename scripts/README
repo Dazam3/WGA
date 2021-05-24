@@ -1,6 +1,6 @@
 README 
 	for Multi-Whole-Genome-Alignment Pipeline
-	Last edited on 02/04/2020 -- GAREEVES
+	Last edited on 05/24/2021 -- GAREEVES
 
 PIPELINE OVERVIEW
 	This pipeline takes a set of genome fasta files and generates both pairwise alignment
@@ -31,7 +31,7 @@ DIRECTORY SETUP					|
 			/split/			| -- Into which fasta files are split
 			/w2b/			| -- In which fasta files are stored as 2bit references
 			/whole/			| -- In which the user places genome input fasta files
-		/2_2bit/				| -- For 2bit chromosome files
+		/2_2bit/			| -- For 2bit chromosome files
 		/3_lav/				| -- For pairwise alignment files
 			/err/			| -- For alignment job stderr
 			/out/			| -- For alignment job stdout
@@ -40,10 +40,10 @@ DIRECTORY SETUP					|
 			/err/			| -- For chaining job stderr
 			/out/			| -- For chaining job stdout
 		/6_mchain/			| -- For genome alignment chains
-		/7_pnet/				| -- For genome alignement prenets
+		/7_pnet/			| -- For genome alignement prenets
 		/8_net/				| -- For genome alignment nets
 		/9_axt/				| -- For chained and netted genomes
-		/10_maf/				| -- For final pairwise alignments
+		/10_maf/			| -- For final pairwise alignments
 		/11_Final/			| -- For final multi-genome alignments
 		/packages/			| -- For required utilities (may contain subdirectories)
 		/scripts/			| -- For scripts that run pipeline
@@ -60,23 +60,23 @@ REQUIRED PACKAGES				|
 		maf_checkThread			|
 		maf_order			|
 		maf_project			|
-		maf_sort				|
+		maf_sort			|
 		mafFind				|
 		roast				|
 		tba				|
 	UCSC-Utils-distibution			| -- http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/
-		axtChain				|
+		axtChain			|
 		axtSort				|
-		axtToMaf				|
+		axtToMaf			|
 		chainMergeSort			|
-		chainNet				|
+		chainNet			|
 		chainPreNet			|
 		faSize				|
 		faSplit				|
 		faToTwoBit			|
-		lavToPsl				|
+		lavToPsl			|
 		netSyntenic			|
-		netToAxt				|
+		netToAxt			|
 						|
 						|
 REQUIRED FILES					|
@@ -91,10 +91,10 @@ REQUIRED FILES					|
 		Chain_Submission.sh		|
 						|
 	SCORE MATRIX				|
-		HoxD55.q				| -> placed in ~/WGA/Scripts/
+		HoxD55.q			| -> placed in ~/WGA/Scripts/
 						|
 	Format File				|
-		Species_List.txt			| -> placed in ~/WGA/Scripts/
+		Species_List.txt		| -> placed in ~/WGA/Scripts/
 						| line1: comma seperated list of species (max 4 character str each)
 						| line2: runtype followed by a '_' and species tree
 						| Examples:
@@ -104,7 +104,7 @@ REQUIRED FILES					|
 						| REFERENCE-BASED, ALL-WAY, BOTH
 						|	 (Ref-roast)    (tba) (Ref-tba)
 						|	
-PRE-RUNNING INSTRUCTIONS				|
+PRE-RUNNING INSTRUCTIONS			|
 	Path update				| add the paths to all packages to your .bashrc/.bash_profile
 						|
 	Script updates				|
@@ -115,7 +115,7 @@ PRE-RUNNING INSTRUCTIONS				|
 						| Change absolute path to util program on line 6
 		Chain_Submission.sh		| Change absolute path to Scripts directory on line 5
 						| Change absolute path to util program on line 6
-		Species_List.txt			| Add all needed species on line 1
+		Species_List.txt		| Add all needed species on line 1
 						| Adjust runtype and tree on line 2
 						|
 ------------------------------------------------------------------------------------------
